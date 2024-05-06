@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background color change by using javascript</title>
+    <style>
+        form{
+            margin-left: 200px;
+            margin-top: 100px;
+        }
+        select,option {
+            margin-left: 600px;
+            margin-top: 20px;
+
+            height: 30px;
+            width: 400px;
+        }
+    </style>
+    <script>
+        function color(value){
+            document.body.style.backgroundColor=value;
+        }
+       function calculate()
+       {
+          var f = document.getElementById("text1").value;
+          var g = document.getElementById("text2").value;
+          var h = document.getElementById("text3").value;
+
+          var result = parseFloat(f)+parseFloat(g)+parseFloat(h);
+           var final=result/300*100;
+           var done=final;
+           alert("The Percentage is "+ done);
+
+
+          
+       }
+
+
+    </script>
+</head>
+<body>
+    <select onchange="color(this.value)">
+        <option value="">color</option>
+        <option value="Blue">Blue</option>
+        <option value="Green">Green</option>
+        <option value="Red">Red</option>
+        <option value="Yellow">Yellow</option>
+        <option value="Black">Black</option>
+    </select>
+    <h1 style="text-align: center; margin-top: 50px;"> Percentage Program using javascript</h1>
+<form name="forms">
+   <b> Enter Tamil Mark :</b> <input type="text" id="text1"></b>
+   <b>Enter English Mark : </b><input type="text" id="text2"></b>
+   <b>Enter Maths Mark : </b><input type="text" id="text3"></b>
+
+    <input type="button" value="calculate" onclick="calculate()">
+</form>
+</body>
+</html>
